@@ -1,23 +1,19 @@
 public class ArrayList
 {
-    private int[] _array; //длинна массивв
+    private int[] _array; //длинна массива
     private int _size; //истинная длина массива
-
     public int Count; //сколько элементов занято
-
     public ArrayList()
     {
         _array = new int[10];
         Count = 0;
     }
-
     public ArrayList(int element)
     {
         _array = new int[10];
         _array[0] = element;
         Count = 1;
     }
-
     public ArrayList(int[] elements)
     {
         _array = new int[(int) (elements.length * 1.5)];
@@ -39,12 +35,9 @@ public class ArrayList
         }
         _array[Count] = element;
         Count++;
-
     }
-
     public void Add(int[] elements)
     {
-
         if (_array.length - Count < elements.length)
         {
             IncreaseLenght(elements.length);
@@ -56,10 +49,6 @@ public class ArrayList
               Count++;
         }
     }
-
-
-
-
     private void IncreaseLenght (int elementCount)
     {
         int newLenght = (int)((_array.length + elementCount) * 1.5);

@@ -5,15 +5,14 @@ public class Main {
         ArrayList arr = new ArrayList(12);
         arr.Add(1);
         arr.Add(1);
-        arr.Add(1);
-        arr.Add(1);
-        arr.Add(1);
-        arr.Add(1);
-
-        for (int i = 0; i < arr.Count; i++)
+        arr.Add(new int[]{1,2,3});
+        PrintArr (arr);
+    }
+    public static void PrintArr (ArrayList array)
+    {
+        for (int i = 0; i < array.Count; i++)
         {
-            System.out.println(arr.Get(i));
+            System.out.println(array.Get(i));
         }
-
     }
 }
